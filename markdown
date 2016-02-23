@@ -15,7 +15,7 @@ printTrailingCharacter(){
 	  done
 }
 
-addMarkdown(){
+add(){
 
   local markup=$1
   local title=$2
@@ -87,13 +87,13 @@ case "$ACTION" in
 	"add")		
 		shift
 		if [[ -z "$3" ]]; then
-		   echo "error : few arguments"
-		   #adddonUsage
+		   echo "markdown error : few arguments"
+			#adddonUsage
 		else		   
 		   # "$1" - markup
 		   # "$2" - title
 		   # "$3" - filePath
-		   addMarkdown "$1" "$2" "$3"
+		   add "$1" "$2" "$3"
 		fi	
 		exit
 	;;
