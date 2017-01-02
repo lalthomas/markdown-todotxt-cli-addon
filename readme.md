@@ -7,3 +7,4 @@ Markdown Addon for Todo.txt CLI
 
 This is supporting addon for other addons. This addon provides markdown support
 
+markdown run.bat 
