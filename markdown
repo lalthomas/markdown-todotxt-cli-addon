@@ -68,7 +68,7 @@ add(){
   
 }
 
-adddonUsage(){
+usage(){
 # list usage information
 		echo "    markdown"    
 		echo "      (no arguments)   - view usage"	
@@ -80,15 +80,14 @@ ACTION=$1
 case "$ACTION" in
 
 	"usage")
-		adddonUsage
+		usage
 		exit	
 	;;
 	
 	"add")		
 		shift
 		if [[ -z "$3" ]]; then
-		   echo "markdown error : few arguments"
-			#adddonUsage
+		   echo "markdown error : few arguments"			
 		else		   
 		   # "$1" - markup
 		   # "$2" - title
@@ -103,7 +102,7 @@ case "$ACTION" in
 	 echo
 	 echo "arguments - $@ - not valid" 
 	 echo 
-	 adddonUsage
+	 usage
 	 exit
 	;;	   
 esac
