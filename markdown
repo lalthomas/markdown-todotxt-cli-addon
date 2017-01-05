@@ -41,13 +41,13 @@ add(){
 		;; 
 	H3) 
 		# Heading III		
-		printf "###" >>"$filePath"
+		printf "### " >>"$filePath"
 		printf "$title" >>"$filePath"
 		printf "\n\n" >>"$filePath"
 		;;		
 	H4) 
 		# Heading IV		
-		printf "####" >>"$filePath"
+		printf "#### " >>"$filePath"
 		printf "$title" >>"$filePath"
 		printf "\n\n" >>"$filePath"
 		;; 	
@@ -59,8 +59,17 @@ add(){
 		printf "`$title`" >>"$filePath"
 		printf "\n\n" >>"$filePath"
 		;;
+	em)
+		printf "*$title*" >>"$filePath"		
+		;;	
+	li)
+		printf -- "- $title" >>"$filePath"		
+		;;			
 	yaml)
 		printf "%% $title" >>"$filePath"
+		printf "\n" >>"$filePath"
+		;;		
+	blank)
 		printf "\n" >>"$filePath"
 		;;		
 	*) 
