@@ -52,18 +52,22 @@ add(){
 		printf "\n\n" >>"$filePath"
 		;; 	
 	p) 
-		printf "$paraTitle" >>"$filePath"
+		printf "$title" >>"$filePath"
 		printf "\n\n" >>"$filePath"
-	;;
+		;;
 	c) 
-		printf "`$paraTitle`" >>"$filePath"
+		printf "`$title`" >>"$filePath"
 		printf "\n\n" >>"$filePath"
-	;;
+		;;
+	yaml)
+		printf "%% $title" >>"$filePath"
+		printf "\n" >>"$filePath"
+		;;		
 	*) 
 		# Heading Unknown		
 		echo "unknown markup type" 
-	;; 
-	
+		;; 	
+		
   esac  
   
 }
